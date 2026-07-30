@@ -2,8 +2,16 @@
 
 ## 📌 Project Overview
 
-This project explores customer churn using exploratory data analysis (EDA) and descriptive statistics. The objective is to identify the factors associated with customer churn and demonstrate how statistical analysis supports business decision-making before applying machine learning models.
+This project explores customer churn using exploratory data analysis (EDA), descriptive statistics, machine learning, and business intelligence visualization.
 
+The objective is to identify the factors associated with customer churn and demonstrate how statistical analysis and data visualization can support business decision-making.
+
+## ⭐ Project Highlights
+
+* Performed exploratory data analysis on 7,043 customer records.
+* Used descriptive statistics to identify churn patterns.
+* Built an interactive Power BI dashboard with DAX measures.
+* Translated analytical findings into business insights for customer retention.
 ---
 
 ## 🎯 Business Problem
@@ -16,6 +24,7 @@ This project aims to answer the following questions:
 * Do customers with shorter tenure churn more?
 * Does contract type influence customer churn?
 * Are higher monthly charges associated with churn?
+* Which customer characteristics are associated with higher churn risk?
 
 ---
 
@@ -41,6 +50,8 @@ The dataset contains **7,043 customer records** and **21 features**, including:
 * Matplotlib
 * Seaborn
 * Jupyter Notebook (Kaggle)
+* Microsoft Power BI
+* DAX Measures
 
 ---
 
@@ -54,6 +65,7 @@ The project includes:
 * Group comparisons
 * Cross-tabulation analysis
 * Customer churn analysis
+* Pattern identification using statistical summaries
 
 ---
 
@@ -66,10 +78,12 @@ The project includes:
 
 ### 2. Customer Tenure
 
-Customers who churned had a much lower average tenure than customers who stayed.
+Customers who churned had a much lower average tenure compared with customers who stayed.
 
-* Stayed: **37.57 months**
-* Churned: **17.98 months**
+| Customer Status |   Average Tenure |
+| --------------- | ---------------: |
+| Stayed          | **37.57 months** |
+| Churned         | **17.98 months** |
 
 ### 3. Contract Type
 
@@ -77,16 +91,18 @@ Customer churn varied significantly by contract type.
 
 | Contract       | Churn Rate |
 | -------------- | ---------: |
-| Month-to-month |     42.71% |
-| One year       |     11.27% |
-| Two year       |      2.83% |
+| Month-to-month | **42.71%** |
+| One year       | **11.27%** |
+| Two year       |  **2.83%** |
 
 ### 4. Monthly Charges
 
 Customers who churned paid higher monthly charges on average.
 
-* Stayed: **$61.27**
-* Churned: **$74.44**
+| Customer Status | Average Monthly Charges |
+| --------------- | ----------------------: |
+| Stayed          |              **$61.27** |
+| Churned         |              **$74.44** |
 
 ---
 
@@ -95,24 +111,54 @@ Customers who churned paid higher monthly charges on average.
 The analysis suggests that:
 
 * Newer customers are more likely to leave.
-* Customers on month-to-month contracts have the highest churn.
-* Customers paying higher monthly charges tend to churn more frequently.
+* Customers on month-to-month contracts have the highest churn rate.
+* Customers with higher monthly charges show increased churn tendency.
 * Longer customer relationships are associated with lower churn.
+* Customer retention strategies should focus on early-stage customers.
 
 ---
 
-## 🚀 Future Work
+## 🤖 Machine Learning (Future Work)
 
 Future improvements include:
 
-* Data cleaning
+* Data cleaning improvements
 * Feature engineering
 * Hypothesis testing
 * Logistic Regression
 * Decision Trees
 * Random Forest
 * XGBoost
-* Model evaluation using Precision, Recall, F1-score, ROC-AUC
+* Model evaluation using:
+
+  * Precision
+  * Recall
+  * F1-score
+  * ROC-AUC
+
+---
+
+## 📊 Power BI Dashboard
+
+An interactive dashboard was created using Microsoft Power BI to analyze customer churn patterns and present business insights visually.
+
+### Key Metrics
+
+* Total Customers: **7,043**
+* Total Churned Customers: **1,869**
+* Churn Rate: **26.54%**
+
+### Dashboard Preview
+
+![Telco Customer Churn Dashboard](dashboard.png)
+
+### Dashboard Features
+
+* KPI cards for customer metrics
+* Churn rate visualization
+* Customer churn analysis by contract type
+* Customer churn analysis by tenure
+* Monthly charge analysis
 
 ---
 
@@ -120,6 +166,9 @@ Future improvements include:
 
 ```text
 ├── Telco_Customer_Churn_Analysis.ipynb
+├── Telco_Customer_Churn_Dashboard.pbix
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── dashboard.png
 └── README.md
 ```
 
@@ -129,4 +178,4 @@ Future improvements include:
 
 **Bhawanjeet**
 
-This project was completed as part of my Data Science learning journey and demonstrates the application of statistics and exploratory data analysis to solve real-world business problems.
+This project was completed as part of my Data Science learning journey and demonstrates the application of statistics, exploratory data analysis, machine learning concepts, and business intelligence tools to solve real-world business problems.
